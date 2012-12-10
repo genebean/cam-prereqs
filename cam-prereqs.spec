@@ -29,7 +29,7 @@ are present, even on x86_64 systems.
 
 
 %prep
-%setup -q
+%setup -q -n cam-prereqs
 
 
 %build
