@@ -15,7 +15,9 @@ BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
 
 # i686 packages that must be installed even if on an x86_64 machine
-Requires:	libXtst(x86-32) libselinux(x86-32) audit-libs(x86-32) cracklib(x86-32) db4(x86-32) pam(x86-32) libstdc++(x86-32) zlib(x86-32)
+Requires:	libXtst(x86-32) libselinux(x86-32) audit-libs(x86-32) 
+Requires:	cracklib(x86-32) db4(x86-32) pam(x86-32) 
+Requires:	libstdc++(x86-32) zlib(x86-32)
 
 # Dependancies that are needed which are not limited to the i686 version
 Requires:	ksh
@@ -50,7 +52,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %changelog
 * Tue Dec 11 2012 Gene Liverman <gliverman@gmail.com - 1.0-3
-- Corrected Requres, replacing .i686 with (x86-32)
+- Corrected Requires, replacing .i686 with (x86-32).
+- Changed the 32-bit dependancies to be on more than one line.
 
 * Mon Dec 10 2012 Gene Liverman <gliverman@gmail.com> - 1.0-2
 - Modified install section to fix build error.
