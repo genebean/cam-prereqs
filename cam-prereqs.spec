@@ -51,7 +51,7 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
-* Tue Dec 11 2012 Gene Liverman <gliverman@gmail.com - 1.0-3
+* Tue Dec 11 2012 Gene Liverman <gliverman@gmail.com> - 1.0-3
 - Corrected Requires, replacing .i686 with (x86-32).
 - Changed the 32-bit dependancies to be on more than one line.
 
