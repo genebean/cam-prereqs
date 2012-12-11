@@ -1,6 +1,6 @@
 %define name	cam-prereqs
 %define version	1.0
-%define release	1
+%define release	2
 
 Name:		%{name}
 Version:	%{version}
@@ -36,8 +36,8 @@ are present, even on x86_64 systems.
 
 
 %install
-rm -rf $RPM_BUILD_ROOT
-
+# rpmlint shows an error by not doing "rm -rf $RPM_BUILD_ROOT" here...
+# putting it in breaks the build.
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -49,7 +49,10 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
-* Mon Dec 10 2012 Gene Liverman <gliverman@gmail.com>
+* Mon Dec 10 2012 Gene Liverman <gliverman@gmail.com> - 1.0-2
+- Modified install section to fix build error.
+
+* Mon Dec 10 2012 Gene Liverman <gliverman@gmail.com> - 1.0-1
 - Initial version of this SPEC file based on requirements listed in the CAM
   6.9.0 install documents.
 
