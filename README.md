@@ -1,8 +1,10 @@
 cam-prereqs
 ===========
 
-This is designed so that a RPM can be build which will pull in all the 
-prerequisite packages needed to run Sun / Oracle Common Array Manager Linux OS.
+This program is intended to simplify the installation of
+Sun / Oracle Common Array Manager (CAM). In particular, it ensures that the
+i686 version of some programs are installed as CAM will only work when they
+are present, even on x86_64 systems.
 
 This software is released under a BSD 3-clause licence which is detailed in the 
 included LICENSE file.
